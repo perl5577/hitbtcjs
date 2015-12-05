@@ -146,6 +146,10 @@ HitBTCClient.prototype.orderbook = function (pair, callback) {
     this._get(pair + '/orderbook', 'public', {}, callback);
 };
 
+HitBTCClient.prototype.symbols = function (callback) {
+    this._get('symbols', 'public', {}, callback);
+};
+
 HitBTCClient.prototype.trades = function () {
     throw new Error('Not Implemented');
 };
